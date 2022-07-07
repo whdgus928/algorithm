@@ -15,5 +15,3 @@ for i in range(2,x+1):
         d[i]=min(d[i],d[i//5]+1)
 
 print(d[x])
-
-#질문 d[1]값은 어디있는지 , elif/if 로 했을때 차이
