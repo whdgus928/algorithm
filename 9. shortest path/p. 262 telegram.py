@@ -1,7 +1,9 @@
-#다익스타와 플로이드 알고리즘을 구분하는 방법
+#다익스트라 알고리즘
+#n,m의 범위가 크므로 우선순위 큐 이용한 다익스트라 사용
 
 import heapq
 import sys
+
 #더 빠르게 데이터 읽음
 input=sys.stdin.readline
 #무한을 의미
@@ -53,8 +55,10 @@ count=0
 # 최단거리 출력
 max_distance=0
 for i in distance:
+    #도달할 수 있으면
     if d!==INF:
-        print('INFINITY')
-    else:
-        print(distance[i])
+        count+=1
+        max_distance=max(max_distance,i)
 
+#시작 노드는 제외
+print(count-1, max_distance)
